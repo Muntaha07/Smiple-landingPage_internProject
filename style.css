@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto:wght@400;700&display=swap');
+/*two fonts poppins and roboto -> poppins for headings etc and roboto for p tags*/
+/* resets*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --text-color:#183b56;
+    --secondary-text-color:#577592;
+    --accent-color:#2294ed;
+    --accent-color-dark:#1d69a3;
+    --padding-inline-section:20px;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    
+    background-color: #1E0853;
+}
+
+h1{
+    font-size: 3rem;
+    color: #FFDE4E;
+}
+h2{
+    font-size: 2rem;
+    color: bisque;
+}
+h3{
+    font-size: 1.5rem;
+}
+h4{
+    color: #FFDE4E;
+}
+p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25rem;
+    color: var(--secondary-text-color);
+    line-height: 1.8rem;
+}
+a{
+    text-decoration: none;
+    /*by default a is inline*/
+    display: inline-block;
+}
+ul{
+    list-style: none;
+}
+ul li a{
+    font-size: 1.1rem;
+}
+
+/*utility classes*/
+.container{
+    max-width: 1180px;
+    margin-inline: auto; /*margin-line means : left and right margin and by auto it will in center*/
+    padding-inline: var(--padding-inline-section); 
+    overflow: hidden; /*used to hide white spaces in small screens*/
+}
+.small-text{
+    font-size: 1rem;
+    font-weight: 700;
+}
+/*we will be using flex many times during this project so will create an utility class for flex*/
+.flex{
+    display: flex;
+    align-items: center;
+
+}
+.hover-link{
+    color:white;
+    transition: 0.5s ease-out;
+}
+.hover-link:hover{
+    color: var(--accent-color);
+}
+.secondary-btn{
+    border: 1px solid var(--text-color);
+    border-radius: 5px;
+    font-weight: 700;
+    color: #6B52AC;
+    padding: 12px 24px;
+    transition: 0.5s ease-out;
+}
+.secondary-btn:hover{
+    border-color: var(--accent-color);
+    color: var(--accent-color) !important;
+}
+.primary-btn{
+    background-color: var(--accent-color);
+    border-radius: 5px;
+    font-weight: 700;
+    color: white !important;
+    padding: 12px 24px;
+    box-shadow:0 0 2px --secondary-text-color;
+    transition: 0.5s ease-out;
+    text-align: center;
+}
+.primary-btn:hover{
+    background-color: var(--accent-color-dark);
+}
+
+/* top banner */
+.top-banner{
+    background-color: #3F0C73;
+    background-size: 300px;
+}
+.banner{
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+}
+
+/*navbar styling starts*/
+.main-nav{
+    margin-top: 10px;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--text-color);
+    position: relative;
+    /*making this relative because in have made links>ul absolute in media-querie:991px */
+}
+.logo img{
+    width: 200px;
+    height: 80px;
+}
+.links{
+    flex-basis: 730px; /*defines width of links sections*/
+}
+.links ul{
+    justify-content: end;
+    gap: 40px;
+}
+.nav-toggle{
+    display: none;
+}
+
+/*header section*/
+header{
+    padding-top:50px var(--padding-inline-section) 0;
+}
+.header-section{
+    justify-content: center;
+    gap: 50px;/*this gap will be between header-left and header-right*/
+}
+.header-left{
+    max-width: 40vw;
+}
+.header-left h1{
+    margin-top: 20px; 
+    color: #FFDE4E; 
+}
+.getstarted-btn{
+    margin-top:20px;
+}
+.header-right img{
+    width: 100%;
+    border: 1px solid #dadada;
+    border-radius: 245px;
+    /*the left portion here is taking 40vw of width and the rest
+    60vw is for this right side and we set images width to 100% so it will arrange its self according to 60vw and will make adjustments in different screen sizes*/
+ /*this 100% is of 60vw*/
+}
+
+/*companies sectoin*/
+.companies-header{
+    text-align: center;
+    margin-block: 30px; /*magrin-block means top and bottom*/
+    color: #FFDE4E;
+}
+.company-logos{
+    justify-content: space-evenly; /*space evenly will be helpfull in small screens*/
+    flex-wrap: wrap; /*will be useful in smal screens*/
+    gap: 20px;
+}
+.c-logo{
+    height: 46px;
+    mix-blend-mode: normal;
+}
+
+/*big-features section*/
+.big-feature-section{
+    padding: 30px var(--padding-inline-section) 0;
+}
+.big-feature-container{
+    gap:30px;
+}
+.feature-image img{
+    width: 600px;
+    height: 500px;
+    border: 1px solid #dadada;
+    border-radius: 245px;
+}
+.feature-description{
+    flex-direction: column;
+    align-items: flex-start;
+}
+#second-feature-box{
+    flex-direction: row-reverse;
+}
+
+/*example section*/
+
+.services-header{
+    padding-top: 40px;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+.services-area{
+    justify-content: space-between;
+    margin-block: 30px;
+    flex-wrap: wrap; /*will work in small screens*/
+}
+.services-card{
+    width: 23%;
+    position: relative;
+    height: 300px;
+    border-radius: 30px;
+    background-color: black; /*this will work if somehow in some browsers linear gradient doesn't work*/
+    background:linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.8)),url(/assets/bg-1.png);
+    background-position: center;
+    background-size: cover;
+    transition: 0.2s ease-out;
+}
+.services-card:hover{
+    box-shadow: 0 0 10px 5px black;
+    /*or*/
+    /* box-shadow: 0 0 10px 5px black; */
+}
+/*image to second card is done using inline css*/
+
+.services-card:nth-child(3){
+    background:linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.8)),url(/assets/bg-2.png);
+    background-position: center;
+    background-size: cover;
+}
+.services-card:nth-child(4){
+    background:linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.8)),url(/assets/bg-3.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.card-text{
+    position: absolute; /*now it will work relative to example-card , because example-card is its parent and its relative*/
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    color: white;
+}
+ 
+/*work with us section*/
+.work-section{
+    
+    padding: 120px var(--padding-inline-section) 80px;
+}
+.work-section-container{
+    flex-direction: column;
+    gap: 30px;
+    color: white;
+    text-align: center;
+}
+.work-section-container p{
+    color: white !important;
+    margin-top: 20px;
+}
+
+/*footer section*/
+footer{
+    padding-block: 80px;
+    /* background-color: #ebf2fa; */
+}
+.footer-container{
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.link-column{
+    flex-direction: column; 
+    align-items: flex-start;
+    gap: 10px;
+}
+.footer-image{
+    height: 200px;
+    width: 200px;
+    mix-blend-mode: darken; /*removes white background*/
+}
+
+/*sub footer section*/
+.sub-footer{
+    /* background-color: #b9cde4; */
+    padding: var(--padding-inline-section);
+}
+.subfooter-container{
+    justify-content: center;
+    gap: 30px;
+}
+
+/*media queries are written in different file: media-queries.css */
+

@@ -1,0 +1,124 @@
+/*media queries*/
+/*screens over 991px will be considered for laptop screen*/
+@media screen and (max-width:991px) { /*or use width<992px : but this is not recommended*/
+    h3{
+        font-size: 1.2rem;
+    }
+    
+    /*navbar*/
+    .nav-toggle{
+        display: block;
+        margin-right: 20px;
+    }
+    #toggleClose{
+        display: none;
+    }
+    /*doing this portion on .links in last after finishing making last breakpoint*/
+    
+    .main-nav{
+        overflow: initial;
+    }
+    .links{
+        position: absolute;
+        /*now they will no work according to their primary container*/
+        background-color: #1E0853;
+        left: -100%; /*hidden initially on left side*/
+        top: 100%; /*now it will start from buttom of the logo icon*/
+        width: 100%;
+        padding-block: 20px;
+        transition: 0.3s ease-in-out;
+    }
+    .links.openNavlinks{ /*when .links have open class in  html it will open so we have to make it toggle in html and we do that using javascript*/
+        left: 0; /*now visible*/
+    }
+    .links ul{
+        flex-direction: column;
+    }
+
+    /*services*/
+    .services-area{
+        gap: 20px;
+    }
+    .services-card{
+        width: calc(50% - 10px);
+        /*so that 10px from one card 10px from another card will be 20px that will be
+         for gap otherwise there will be no space for gap and they will start going to 
+         the next line*/
+         height: 180px;
+    }
+
+    /*work*/
+    .work-section{
+        padding-block: 80px;
+    }
+}
+
+/*will work when screen will be 767px or less than 767px*/
+@media screen and (max-width:767px) {
+    
+    .primary-btn{
+        padding: .8rem 2rem;
+    }
+
+    .header-section{
+        /*flex-direction:column; // this will put text on top and image below so we will use column-reverse*/
+        flex-direction: column-reverse;
+    }
+    .header-left{
+        max-width: 100vw;
+        text-align: center;
+    }
+
+    .companies-header{
+        margin-top: 80px;
+    }
+
+    .big-feature-container, #second-feature-box{
+        flex-direction: column;
+    }
+    .feature-description{
+        align-items: center;
+    }
+    .services-header{
+        padding-top:80px;
+    }
+
+    .work-section{
+        margin-top: 40px;
+    }
+
+    .footer-container{
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+        text-align: center;
+    }
+    .link-column{
+        align-items: stretch;
+    }
+
+    .subfooter-container{
+         flex-wrap: wrap;
+    }
+}
+
+/*this will work for screen with width 479px or less*/
+@media screen and (max-width:479px) {
+    :root{
+        --padding-inline-section:10px;
+    } 
+    h1{
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+    /*h3 is also changed to 1.2 rem in first break point*/ 
+    p{
+        font-size: 1rem;
+    }
+    .services-card{
+        width: 100%;
+    }
+
+}

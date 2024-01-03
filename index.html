@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        DesignVistaHub</title>
+    <link rel="icon" type="image/x-icon" href="/assets/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media-queries.css">
+</head>
+<body>
+    <!--all sections and data will be inside container-->
+    <!-- top banner -->
+    <div class="top-banner">
+        <div class="container">
+            <div class="small-text banner">Let's Build Your Brand Together</div>
+        </div>
+    </div>
+
+    <!-- navbar-->
+    <nav id="nav">
+        <div class="container main-nav flex">
+            <a href="#" class="logo">
+                <img src="./assets/logo.png" alt="logo-image">
+            </a>
+            <div class="links" id="links-nav">
+                <ul class="flex">
+                    <li><a href="#services" class="hover-link">Services</a></li>
+                    <li><a href="#about" class="hover-link">About</a></li>
+                    <li><a href="#join" class="hover-link">Join</a></li>
+                    <li><a href="#" class="hover-link">Our Team</a></li>
+                    <li><a href="#" class="hover-link secondary-btn">Sign in</a></li>
+                    <li><a href="#" class="hover-link primary-btn">Sign up</a></li>
+                </ul>
+            </div>
+            <a href="#" class="nav-toggle hover-link" id="navtoggle"><i class="fa-solid fa-bars"></i></a>
+            <a href="#" class="nav-toggle hover-link" id="toggleClose"><i class="fa-solid fa-xmark"></i></i></a>
+        </div>
+    </nav>
+
+
+    <!-- header -->
+    <header>
+        <div class="container header-section flex">
+            <div class="header-left">
+                <h1>Design confidently.</h1>
+                <p>Design confidently with our remote user research platform, elevating your brand to new heights. We craft and amplify your brand for significant impact.</p>
+                <a href="#" class="primary-btn getstarted-btn">Start design</a>
+            </div>
+            <div class="header-right">
+                <img src="/assets/Untitled design (1).png" alt="header-image">
+            </div>
+        </div>
+    </header>
+
+    <!-- companies sectoin -->
+    <section class="companies section">
+        <div class="container">
+            <div class="small-text companies-header">
+                The most renowned companies globally have partnered with us to enhance their design decision-making process.
+            </div>
+            <div class="company-logos flex">
+                <img class="c-logo" src="/Company images/company1.png">
+                <img class="c-logo" src="/Company images/asset 19.png">
+                <img class="c-logo" src="/Company images/asset 22.png">
+                <img class="c-logo" src="/Company images/asset 3.png">
+                <img class="c-logo" src="/Company images/asset 5.png">
+                <img class="c-logo" src="/Company images/asset 6.png">
+                <img class="c-logo" src="/Company images/asset 9.png">
+            </div>
+        </div>
+    </section>
+
+    <!--big-features section-->
+    <section class="big-feature-section" id="about">
+        <div class="container flex big-feature-container">
+            <div class="feature-image">
+                <img src="/assets/Untitled design (2).png">
+            </div>
+            <!--here you might be thinking why i take img inside div , why not directly img tag. Img ko div main rakhe ne img ko ek particular width milti hain
+            ki miuje kitni width leni hain , images thoda div se alag kaam karti hain. isiliya  hum usually images ko div main rakhte hain-->
+            <div class="feature-description flex">
+                <h4>We design confidently</h4>
+                <h2>About us</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita dolore itaque corrupti aliquid quidem esse ab veritatis illum praesentium rerum?</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="big-feature-section">
+        <!-- we will make here image on right side and text on left side.
+        we can do this by placing text first then image or we can set flex-direction row reverse-->
+        <div class="container flex big-feature-container" id="second-feature-box">
+            <div class="feature-image">
+                <img src="/assets/Untitled design (3).png">
+            </div>
+            <!--here you might be thinking why i take img inside div , why not directly img tag. Img ko div main rakhe ne img ko ek particular width milti hain
+            ki miuje kitni width leni hain , images thoda div se alag kaam karti hain. isiliya  hum usually images ko div main rakhte hain-->
+            <div class="feature-description flex">
+                <h4>Take your business to next level with best</h4>
+                <h2>Marketing</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi, reprehenderit assumenda iusto rerum atque dolores quaerat nesciunt corrupti ut eum!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="big-feature-section">
+        <div class="container flex big-feature-container">
+            <div class="feature-image">
+                <img src="/assets/Untitled design (4).png">
+            </div>
+            <!--here you might be thinking why i take img inside div , why not directly img tag. Img ko div main rakhe ne img ko ek particular width milti hain
+            ki miuje kitni width leni hain , images thoda div se alag kaam karti hain. isiliya  hum usually images ko div main rakhte hain-->
+            <div class="feature-description flex">
+                <h4>We take best decisions with best</h4>
+                <h2>Product managers</h2>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi dicta optio impedit. Saepe praesentium dicta aspernatur officia magnam optio debitis?
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!--services section-->
+    <sectoin class="services-section" id="services">
+        <div class="container">
+            <div class="services-header flex">
+                <h2 class="services-heading">One platform, Many Services</h2>
+                <a href="#footer" class="secondary-btn">See all services <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="services-area flex">
+                <a href="#" class="services-card">
+                    <h3 class="card-text">Frontend development</h3>
+                </a>
+
+                <a href="#" class="services-card" style="background:linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.8)),url(/assets/exampleImage2.jpg); background-size:cover;">
+                    <h3 class="card-text">Design professionals</h3>
+                </a>
+
+                <a href="#" class="services-card">
+                    <h3 class="card-text">Optimisation for
+                        Marketers</h3>
+                </a>
+
+                <a href="#" class="services-card">
+                    <h3 class="card-text">Product managers</h3>
+                </a>
+            </div>
+        </div>
+    </sectoin>
+
+    <!-- work with us section-->
+    <section class="work-section" id="join">
+        <div class="container flex work-section-container">
+            <h1>Start Today</h1>
+            <p>Take care of your brand today with us.</p>
+            <a href="#" class="primary-btn">Design My Brand</a>
+        </div>
+    </section>
+
+    <!--footer-->
+    <footer id="footer">
+        <div class="container flex footer-container">
+            <div>
+                <a href="#" class="logo">
+                    <img src="/assets/logo.png" alt="logo">
+                </a>
+                <p>
+                    Think beyond big. Envision on a colossal scale</p>
+                <img class="footer-image" src="/assets//growbusiness.jpg">
+            </div>
+
+            <div class="link-column flex">
+                <h4>Products</h4>
+                <a href="#" class="hover-link">Overview</a>
+                <a href="#" class="hover-link">Pricing</a>
+                <a href="#" class="hover-link">Customers</a>
+                <a href="#" class="hover-link">Check status</a>
+                <a href="#" class="hover-link">Sign up</a>
+                <a href="#" class="hover-link">Book a demo</a>
+            </div>
+            <div class="link-column flex">
+                <h4>What we do</h4>
+                <a href="#" class="hover-link">Overview</a>
+                <a href="#" class="hover-link">Logo design</a>
+                <a href="#" class="hover-link">Software solutions</a>
+                <a href="#" class="hover-link">Advertising</a>
+                <a href="#" class="hover-link">Seo</a>
+                <a href="#" class="hover-link">It solutions</a>
+                <a href="#" class="hover-link">Graphic designs</a>
+                <a href="#" class="hover-link">Hosting</a>
+            </div>
+            <div class="link-column flex">
+                <h4>Resources</h4>
+                <a href="#" class="hover-link">Overview</a>
+                <a href="#" class="hover-link">Blog</a>
+                <a href="#" class="hover-link">Examples</a>
+                <a href="#" class="hover-link">Guide</a>
+                <a href="#" class="hover-link">Careers</a>
+                <a href="#" class="hover-link">Contact</a>
+                <a href="#" class="hover-link">Help center</a>
+            </div>
+        </div>
+    </footer>
+
+    <!--sub footer-->
+    <div class="sub-footer">
+        <div class="container flex subfooter-container">
+            <a href="#" class="hover-link">Privacy policy</a>
+            <a href="#" class="hover-link">Terms and condition</a>
+            <a href="#" class="hover-link">Security information</a>
+            <a href="#" class="hover-link"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="hover-link"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="hover-link"><i class="fa-brands fa-twitter   "></i></a>
+            <a href="#nav" class="hover-link"><i class="fa-sharp fa-solid fa-arrow-up"></i></a>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/e97061a550.js" crossorigin="anonymous"></script>
+    <script>
+        const toggleBtn=document.getElementById("navtoggle");
+        const closeBtn=document.getElementById("toggleClose");
+        const navLinks=document.getElementById("links-nav");
+        toggleBtn.addEventListener('click',()=>{
+            navLinks.classList.toggle('openNavlinks');
+            closeBtn.style.display="block";
+            toggleBtn.style.display="none";
+        })
+        closeBtn.addEventListener('click',()=>{
+            navLinks.classList.toggle("openNavlinks");
+            toggleBtn.style.display="block";
+            closeBtn.style.display="none";
+        })
+
+    </script>
+</body>
+</html>
